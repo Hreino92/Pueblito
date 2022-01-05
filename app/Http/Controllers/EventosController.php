@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Evento;
+use Illuminate\Support\Facades\DB;
 
 class EventosController extends Controller
 {
@@ -14,8 +15,10 @@ class EventosController extends Controller
      */
     public function index()
     {
-        $eventos = Evento::paginate(5);
-        return view('eventos.index', compact('eventos'));
+        $eventos = Evento::paginate(10);
+        return view('eventos.index', [
+            'eventos' => DB::table('eventos')->simplePaginate(5)
+        ]);
     }
 
     /**
@@ -36,7 +39,24 @@ class EventosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:1024'
+        ]);
+        
+        $evento = $request->all();
+        
+        if ($imagen = $request->file('img')) {
+            $rutaGuardarImg = 'imagen/';
+            $imagenEvento = date('YmHis').".".$imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenEvento);
+            $evento['img']= "$imagenEvento";
+            $evento['subtitulo'] = $request->subtitulo;
+            
+        }
+        Evento::create($evento);
+        $eventos = DB::table('eventos')->simplePaginate(5 );
+        return view('eventos.index', compact('eventos'));
+        // var_dump($evento);
     }
 
     /**
@@ -58,7 +78,9 @@ class EventosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $evento = Evento::find($id);
+        // var_dump($evento);
+        return view('eventos.editar', compact('evento'));
     }
 
     /**
