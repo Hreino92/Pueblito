@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventosController;
+use App\Models\Evento;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +16,8 @@ use App\Http\Controllers\EventosController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $eventos = Evento::all();
+    return view('welcome',compact('eventos'));
 })->name('welcome');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function() {
