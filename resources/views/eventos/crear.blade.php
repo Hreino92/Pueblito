@@ -89,10 +89,9 @@
                 </div>
                 <div class="w-full px-2 md:w-1/2">
                     <label class="block mb-1" for="formGridCode_last">DESCRIPCION</label>
-                    <textarea rows="10" cols="50" name="descripcion"
+                    <textarea rows="25" cols="50" name="descripcion"
                         class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
-                        id="formGridCode_last">
-        </textarea>
+                        id="formGridCode_last"></textarea>
 
                 </div>
             </div>
@@ -109,14 +108,14 @@
                 <br>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-2 imgUp">
+                        <div class="col-sm-5 imgUp">
                             <div class="imagePreview"></div>
                             <label class="btn btn-primary">
                                 Upload<input type="file" class="uploadFile img" value="Upload Photo"
                                     style="width: 0px;height: 0px;overflow: hidden;" name="img">
                             </label>
                         </div><!-- col-2 -->
-                        <i class="fa fa-plus imgAdd"></i>
+                        {{-- <i class="fa fa-plus imgAdd"></i> --}}
                     </div><!-- row -->
                 </div><!-- container -->
                 <div class="flex items-center justify-center w-full">

@@ -72,9 +72,11 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-6">
             <div class="container col-6">
-                <form action="{{ route('eventos.store') }}" enctype="multipart/form-data" method="POST"
+                <form action="{{ route('eventos.update', $evento->id) }}" enctype="multipart/form-data" method="POST"
                     class="space-y-10 text-gray-700">
                     @csrf
+                    <input name="_method" type="hidden" value="PUT">
+                    <input  name="id" value="{{$evento->id}}">
                     <div class="flex flex-wrap">
                         <div class="w-full">
                             <label class="block mb-1" for="formGridCode_card">TITULO</label>
@@ -126,7 +128,7 @@
                         <br>
                         <div class="container">
                             <div class="row">
-                                <div class="col-sm-5 imgUp">
+                                <div class="col-sm-7 imgUp">
                                     <div class="imagePreview"></div>
                                     <label class="btn btn-primary">
                                         Upload
@@ -136,7 +138,7 @@
                                     </label>
 
                                 </div><!-- col-2 -->
-                                <i class="fa fa-plus imgAdd"></i>
+                                {{-- <i class="fa fa-plus imgAdd"></i> --}}
                                 <div class="grid grid-cols-1">
 
                                     <div class="col-sm-5 imgUp">
@@ -155,7 +157,7 @@
 
                     </div>
                     <div class="flex itemes-center-justify-center mg:gap-8 gap-4 pt-5 pb-5">
-                        <a href="{{ route('eventos.index') }}"
+                        <a href="{{ route('eventos.update', $evento->id) }}"
                             class="w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-x1 font-medium text-white px-4 py-2">Cancelar</a>
                         <button type="submit"
                             class="w-auto bg-purple-500 hover:bg-purple-700 rounded-lg shadow-xl font-medium text-white px-4 py-2 ">Guardar

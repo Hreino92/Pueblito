@@ -40,10 +40,10 @@ class EventosController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:1024'
+            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:25600'
         ]);
         
-        $evento = $request->all();
+         $evento = $request->all();
         
         if ($imagen = $request->file('img')) {
             $rutaGuardarImg = 'imagen/';
@@ -56,7 +56,7 @@ class EventosController extends Controller
         Evento::create($evento);
         $eventos = DB::table('eventos')->simplePaginate(5 );
         return view('eventos.index', compact('eventos'));
-        // var_dump($evento);
+        var_dump($evento);
     }
 
     /**
@@ -92,7 +92,25 @@ class EventosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $eventoedit = Evento::find($id);
+        
+        $eventoedit->subtitulo = $request->input('subtitulo');
+        if ($imagen = $request->file('img')) {
+            $rutaGuardarImg = 'imagen/';
+            $imagenEvento = date('YmHis').".".$imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenEvento);
+            $eventoedit->titulo = $request->input('titulo');
+            $eventoedit['subtitulo'] = $request->subtitulo;
+            $eventoedit['descripcion'] = $request->descripcion;
+
+            $eventoedit['img']= "$imagenEvento";
+            
+        }
+        $eventoedit->update();
+        $eventos = DB::table('eventos')->simplePaginate(5);
+        
+        return redirect('/eventos')->with('success', 'Datos Actualizados');
     }
 
     /**
@@ -103,6 +121,8 @@ class EventosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $evento = Evento::find($id);
+        $evento->delete();
+        return redirect('/eventos')->with('error','Evento Eliminado');
     }
 }
