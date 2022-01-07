@@ -15,7 +15,7 @@ use App\Http\Controllers\EventosController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::resource('/eventos', EventosController::class);
