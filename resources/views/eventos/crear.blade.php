@@ -1,16 +1,20 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+</head>
+@livewire('navigation-menu')
 <x-app-layout>
     <x-slot name="header">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
-
-        <h2>{{ _('Crear Eventos') }}</h2>
+                <h1 class="text-center">Crear evento</h1>
         <style>
             body {
                 background-color: #f5f5f5;
@@ -89,9 +93,7 @@
                 </div>
                 <div class="w-full px-2 md:w-1/2">
                     <label class="block mb-1" for="formGridCode_last">DESCRIPCION</label>
-                    <textarea rows="25" cols="50" name="descripcion"
-                        class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
-                        id="formGridCode_last"></textarea>
+                    <textarea rows="25" cols="50" name="descripcion"class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"id="formGridCode_last"></textarea>
 
                 </div>
             </div>
@@ -102,7 +104,7 @@
       </div> --}}
 
 
-            <div class="grid grid-cols-1 ">
+            <div class="grid col-sm-6 ">
                 <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Subir
                     Imagen</label>
                 <br>
@@ -133,12 +135,11 @@
 
                 </div> --}}
             </div>
-    </div>
+   
     <div class="flex itemes-center-justify-center mg:gap-8 gap-4 pt-5 pb-5">
-        <a href="{{ route('eventos.index') }}"
-            class="w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-x1 font-medium text-white px-4 py-2">Cancelar</a>
-        <button type="submit"
-            class="w-auto bg-purple-500 hover:bg-purple-700 rounded-lg shadow-xl font-medium text-white px-4 py-2 ">Guardar</button>
+        <a href="{{ route('eventos.store') }}"
+            class="btn btn-outline-secondary">Cancelar</a>
+        <button type="submit" class="btn btn-outline-primary" >Guardar</button>
     </div>
     </form>
     </div>
@@ -185,3 +186,12 @@
     });
   });
 </script> --}}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>

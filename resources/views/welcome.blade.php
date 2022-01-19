@@ -446,15 +446,15 @@
                  <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                      <img class="d-block img-fluid" src="/imagen/{{ $item->img }}" alt="">
                         <div class="carousel-caption d-none d-md-block">
-                           <h3>{{ $item->titulo }}</h3>
-                           <p>{{ $item->subtitulo }}</p>
+                           <h3 class="font-weight-bold" style="color: black">{{ $item->titulo }}</h3>
+                           <p style="color: brown">{{ $item->subtitulo }}</p>
                         </div>
                  </div>
               @endforeach
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
+              <span class="sr-only ">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>

@@ -1,4 +1,17 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
 
+</head>
+@livewire('navigation-menu')
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -22,10 +35,11 @@
         </div>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    <a type="button" href="{{ route('eventos.create') }}"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Crear evento</a>
-                </div>
+                {{-- <div class="bg-green overflow-hidden shadow-xl sm:rounded-lg">
+                    <a type="button" href=""
+                        class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Crear evento</a>
+                </div> --}}
+                <a class="btn btn-primary" href="{{ route('eventos.create') }}" role="button">Crear Evento</a>
                 <hr>
              
                 <table class="table-fixed w-full">
@@ -53,7 +67,7 @@
                                     <div class="flex justify venter rounded-lg text-lg" role="group">
                                         {{-- Boton editar --}}
                                         <a href="{{ route('eventos.edit', $evento->id) }}"
-                                            class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Editar</a>
+                                            class="btn btn-outline-secondary">Editar</a>
                                         {{-- Boton eliminar --}}
                                         {{-- <H1 class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded"></H1> --}}
                                         {{-- <form action="{{ route('eventos.destroy', $evento->id) }}" method="POST"
@@ -62,7 +76,7 @@
                                             @method('DELETE')
                                             <button type="submit" class="formElimiar">Eliminar</button>
                                         </form> --}}
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminar{{$evento->id}}">
+                                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#ModalEliminar{{$evento->id}}">
                                             Eliminar
                                         </button>
     

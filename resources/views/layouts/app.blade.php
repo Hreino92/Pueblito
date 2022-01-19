@@ -20,12 +20,13 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        
     </head>
     <body class="font-sans antialiased" style="">
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+            {{-- @livewire('navigation-menu') --}}
 
             <!-- Page Heading -->
             @if (isset($header))
@@ -48,4 +49,5 @@
 
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
+    
 </html>

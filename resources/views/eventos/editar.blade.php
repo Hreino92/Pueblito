@@ -1,3 +1,17 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+</head>
+@livewire('navigation-menu')
 <x-app-layout>
     <x-slot name="header">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -76,7 +90,7 @@
                     class="space-y-10 text-gray-700">
                     @csrf
                     <input name="_method" type="hidden" value="PUT">
-                    <input  name="id" value="{{$evento->id}}">
+                    <input class="hidden" name="id" value="{{$evento->id}}">
                     <div class="flex flex-wrap">
                         <div class="w-full">
                             <label class="block mb-1" for="formGridCode_card">TITULO</label>
@@ -158,9 +172,9 @@
                     </div>
                     <div class="flex itemes-center-justify-center mg:gap-8 gap-4 pt-5 pb-5">
                         <a href="{{ route('eventos.update', $evento->id) }}"
-                            class="w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-x1 font-medium text-white px-4 py-2">Cancelar</a>
+                            class="btn btn-outline-secondary">Cancelar</a>
                         <button type="submit"
-                            class="w-auto bg-purple-500 hover:bg-purple-700 rounded-lg shadow-xl font-medium text-white px-4 py-2 ">Guardar
+                            class="btn btn-outline-primary">Guardar
                             Cambios</button>
                     </div>
                 </form>
