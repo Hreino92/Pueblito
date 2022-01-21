@@ -22,9 +22,9 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
         
     </head>
-    <body class="font-sans antialiased" style="">
+    <body class="font-sans antialiased" >
         <x-jet-banner />
-
+        @include('navigation-menu')
         <div class="min-h-screen bg-gray-100">
             {{-- @livewire('navigation-menu') --}}
 
@@ -49,5 +49,8 @@
 
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
+    <footer>
+        @include('footer-menu')
+    </footer>
     
 </html>

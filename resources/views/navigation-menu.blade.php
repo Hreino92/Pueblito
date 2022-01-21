@@ -1,3 +1,10 @@
+<style>
+.fixedbutton {
+    position: fixed;
+    top: 0px;
+    right: 0px; 
+}
+</style>
 <nav class="navbar navbar-expand-lg"
     style="background: linear-gradient(90deg, rgba(76,48,37,1) 0%, rgba(163,115,92,1) 60%, rgba(149,94,61,1) 100%);">
     <img src="/imagen/Logo Vectorizado.png" alt="" height="50px;" width="50px;" srcset="">
@@ -37,7 +44,7 @@
 
                         <x-jet-dropdown-link  href="{{ route('logout') }}" onclick="event.preventDefault();
                                 this.closest('form').submit();">
-                            <h1 class="btn btn-secondary btn-sm">{{ __('Cerrar Sesion') }}</h1>
+                            <h1 class="btn btn-secondary btn-sm fixedbutton">{{ __('Cerrar Sesion') }}</h1>
                         </x-jet-dropdown-link>
                     </form>
                 </li>

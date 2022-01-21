@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
 </script>
@@ -9,12 +9,11 @@ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 </script>
-
 </head>
-@livewire('navigation-menu')
+
 <x-app-layout>
     <x-slot name="header">
-                <h1 class="text-center">Crear evento</h1>
+        <h1 class="text-center">Crear evento</h1>
         <style>
             body {
                 background-color: #f5f5f5;
@@ -72,76 +71,46 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
         </style>
 
     </x-slot>
-    <div class="container col-6">
-        <form action="{{ route('eventos.store') }}" enctype="multipart/form-data" method="POST"
-            class="space-y-10 text-gray-700">
+    <div class="container">
+        <form action="{{ route('eventos.store') }}" enctype="multipart/form-data" method="POST">
             @csrf
-            <div class="flex flex-wrap">
-                <div class="w-full">
-                    <label class="block mb-1" for="formGridCode_card">TITULO</label>
+            <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+                <div class="w-full px-2 md:w-1/2">
+                    <label class="block mb-1">TITULO</label>
                     <input name="titulo"
                         class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
                         type="text" id="formGridCode_card" />
                 </div>
-            </div>
-            <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
                 <div class="w-full px-2 md:w-1/2">
                     <label class="block mb-1" for="formGridCode_name">SUBTITULO</label>
                     <input name="subtitulo"
                         class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
                         type="text" id="formGridCode_card" />
                 </div>
+            </div>
+            <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
                 <div class="w-full px-2 md:w-1/2">
                     <label class="block mb-1" for="formGridCode_last">DESCRIPCION</label>
-                    <textarea rows="25" cols="50" name="descripcion"class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"id="formGridCode_last"></textarea>
-
+                    <textarea rows="10" cols="80" name="descripcion" class="resize-y resize-x rounded-md hover:resize"
+                        id="formGridCode_last"></textarea>
+                </div>
+                <div class="w-full px-2 md:w-1/2">
+                    <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Cargar Imagen</label><br>
+                    <div class="col-sm-5 imgUp">
+                        <div class="imagePreview"></div>
+                        <label class="btn btn-primary">
+                            Imagen<input type="file" class="uploadFile img" value="Upload Photo"
+                                style="width: 0px;height: 0px;overflow: hidden;" name="img">
+                        </label>
+                    </div>
                 </div>
             </div>
-            {{-- Mostrar img seleccionada --}}
-            {{-- <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
-      <div class="grid grid-cols 1 mt-5 mt-7">
-        <img id="ImagenSeleccionada" style="max-height:300px;">
-      </div> --}}
-
-
-            <div class="grid col-sm-6 ">
-                <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Subir
-                    Imagen</label>
-                <br>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-5 imgUp">
-                            <div class="imagePreview"></div>
-                            <label class="btn btn-primary">
-                                Upload<input type="file" class="uploadFile img" value="Upload Photo"
-                                    style="width: 0px;height: 0px;overflow: hidden;" name="img">
-                            </label>
-                        </div><!-- col-2 -->
-                        {{-- <i class="fa fa-plus imgAdd"></i> --}}
-                    </div><!-- row -->
-                </div><!-- container -->
-                <div class="flex items-center justify-center w-full">
-                    {{-- <label for="imagen"
-                        class="flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-100 hover:border-purple-300 group">
-                        <div class="flex flex-col items-center justify-center pt-7">
-                            <svg class="w-10 h-10 text-purple-400 group:hover:text-purple-600" fill="none"
-                                stroke="currentColor" viewbox="0 0 24 24">
-                            </svg>
-                            <p class="text-sm text-gray-400 grouo-hover:text-purple-600 pt-1 tracking-wider">Seleccione
-                                la Imagen</p>
-                        </div>
-                        <input type="file" name="img" id="imagen" class="hidden">
-                    </label>
-
-                </div> --}}
+            <div class="flex flex-wrap -mx1 space-y-1 md:space-y-0">
+                <a href="{{ route('eventos.store') }}" class="btn btn-outline-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-outline-primary">Guardar</button>
             </div>
-   
-    <div class="flex itemes-center-justify-center mg:gap-8 gap-4 pt-5 pb-5">
-        <a href="{{ route('eventos.store') }}"
-            class="btn btn-outline-secondary">Cancelar</a>
-        <button type="submit" class="btn btn-outline-primary" >Guardar</button>
-    </div>
-    </form>
+        </form>
+        <hr><hr>
     </div>
 </x-app-layout>
 <script>
@@ -187,11 +156,11 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
   });
 </script> --}}
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>

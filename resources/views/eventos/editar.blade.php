@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
 </script>
@@ -11,7 +11,7 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
 </script>
 
 </head>
-@livewire('navigation-menu')
+
 <x-app-layout>
     <x-slot name="header">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -83,103 +83,68 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
         </style>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-6">
-            <div class="container col-6">
-                <form action="{{ route('eventos.update', $evento->id) }}" enctype="multipart/form-data" method="POST"
-                    class="space-y-10 text-gray-700">
-                    @csrf
-                    <input name="_method" type="hidden" value="PUT">
-                    <input class="hidden" name="id" value="{{$evento->id}}">
-                    <div class="flex flex-wrap">
-                        <div class="w-full">
-                            <label class="block mb-1" for="formGridCode_card">TITULO</label>
-                            <input name="titulo" value="{{ $evento->titulo }}"
-                                class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
-                                type="text" id="formGridCode_card" />
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
-                        <div class="w-full px-2 md:w-1/2">
-                            <label class="block mb-1" for="formGridCode_name">SUBTITULO</label>
-                            <input name="subtitulo" value="{{ $evento->subtitulo }}"
-                                class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
-                                type="text" id="formGridCode_card" />
-                        </div>
-                        <div class="w-full px-2 md:w-1/2">
-                            <label class="block mb-1" for="formGridCode_last">DESCRIPCION</label>
-                            <textarea rows="10" cols="20" name="descripcion"
-                                class="
-                            form-control
-                            block
-                            w-full
-                            px-3
-                            py-1.5
-                            text-base
-                            font-normal
-                            text-gray-700
-                            bg-white bg-clip-padding
-                            border border-solid border-gray-300
-                            rounded
-                            transition
-                            ease-in-out
-                            m-0
-                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-                          ">{{ $evento->descripcion }}</textarea>
+    <div class="container">
 
-                        </div>
-                    </div>
-                    {{-- Mostrar img seleccionada --}}
-                    {{-- <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
-              <div class="grid grid-cols 1 mt-5 mt-7">
-                <img id="ImagenSeleccionada" style="max-height:300px;">
-              </div> --}}
-
-
-                    <div class="grid grid-cols-1 ">
-                        <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Subir
-                            Imagen Nueva</label>
-                        <br>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-7 imgUp">
-                                    <div class="imagePreview"></div>
-                                    <label class="btn btn-primary">
-                                        Upload
-                                        <input type="file" class="uploadFile img" value="Upload Photo"
-                                            style="width: 0px; height: 0px;overflow: hidden;" name="img"
-                                            value="{{ $evento->img }}">
-                                    </label>
-
-                                </div><!-- col-2 -->
-                                {{-- <i class="fa fa-plus imgAdd"></i> --}}
-                                <div class="grid grid-cols-1">
-
-                                    <div class="col-sm-5 imgUp">
-                                        <label class="block mb-1 uppercase items-center justify-center"
-                                            for="formGridCode_month">Imagen anterior</label>
-                                        <br>
-                                        <img src="/imagen/{{$evento->img}}" alt="" srcset="">
-                                    </div>
-                                </div>
-                            </div><!-- row -->
-                        </div><!-- container -->
-                        <div class="flex items-center justify-center w-full">
-                        </div>
-
-
-
-                    </div>
-                    <div class="flex itemes-center-justify-center mg:gap-8 gap-4 pt-5 pb-5">
-                        <a href="{{ route('eventos.update', $evento->id) }}"
-                            class="btn btn-outline-secondary">Cancelar</a>
-                        <button type="submit"
-                            class="btn btn-outline-primary">Guardar
-                            Cambios</button>
-                    </div>
-                </form>
+        <form action="{{ route('eventos.update', $evento->id) }}" enctype="multipart/form-data" method="POST">
+            @csrf
+            <input name="_method" type="hidden" value="PUT">
+            <input class="hidden" name="id" value="{{ $evento->id }}">
+            <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+                <div class="w-full px-2 md:w-1/2">
+                    <label class="block mb-1" for="formGridCode_card">TITULO</label>
+                    <input name="titulo" value="{{ $evento->titulo }}"
+                        class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
+                        type="text" id="formGridCode_card" />
+                </div>
+                <div class="w-full px-2 md:w-1/2">
+                    <label class="block mb-1" for="formGridCode_name">SUBTITULO</label>
+                    <input name="subtitulo" value="{{ $evento->subtitulo }}"
+                        class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
+                        type="text" id="formGridCode_card" />
+                </div>
             </div>
-        </div>
+            <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+
+                <div class="w-full px-2 md:w-1/2">
+                    <label class="block mb-1" for="formGridCode_last">DESCRIPCION</label>
+                    <textarea rows="10" cols="80" name="descripcion"
+                        class="resize-y resize-x rounded-md hover:resize">{{ $evento->descripcion }}</textarea>
+                </div>
+                
+            </div>
+            <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+                <div class="w-full px-2 md:w-1/2">
+                    <div class="col-sm-5 imgUp">
+                        <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Imagen
+                            anterior</label>
+                        <br>
+                        <img src="/imagen/{{ $evento->img }}" alt="" srcset="">
+                    </div>
+                </div>
+                
+                <div class="w-full px-2 md:w-1/2">
+                    <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Cargar
+                        Imagen Nueva</label><br>
+                    <div class="col-sm-5 imgUp">
+                        <div class="imagePreview"></div>
+                        <label class="btn btn-primary">Imagen<input type="file" class="uploadFile img"
+                                value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;" name="img">
+                        </label>
+
+                        <a href="{{ route('eventos.update', $evento->id) }}" class="btn btn-outline-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-outline-primary">Guardar
+                        Cambios</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-wrap -mx-1 space-y-1 md:space-y-0">
+               
+            </div>
+        </form>
+        <hr><hr>
+
     </div>
     <script>
         $(".imgAdd").click(function() {
