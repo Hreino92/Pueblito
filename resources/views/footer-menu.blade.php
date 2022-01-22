@@ -1,11 +1,10 @@
 <style>
   .footer {
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
-    height: 90px;
-    background-color: red;
+    height: 85px;
+    z-index: 100;
     color: white;
     text-align: center;
   }
