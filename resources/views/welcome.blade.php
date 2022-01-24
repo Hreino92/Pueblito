@@ -421,6 +421,7 @@
 
 </head>
 @include('navigation-menu')
+
 <body class="antialiased ">
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -430,70 +431,75 @@
     <div class="container">
         <h1 class="text-center">¡Bienvenidos!</h1>
     </div>
-{{-- Carrusel --}}
+    {{-- Carrusel --}}
     <div class="container center col-6 jumbotron">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
             <ol class="carousel-indicators">
-             @foreach( $eventos as $item )
-                <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
-             @endforeach
+                @foreach ($eventos as $item)
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}"
+                        class="{{ $loop->first ? 'active' : '' }}"></li>
+                @endforeach
             </ol>
-          
+
             <div class="carousel-inner" role="listbox">
-              @foreach( $eventos as $item )
-                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                     <img class="d-block img-fluid" src="/imagen/{{ $item->img }}" alt="">
+                @foreach ($eventos as $item)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                        <img class="d-block img-fluid" src="/imagen/{{ $item->img }}" alt="">
                         <div class="carousel-caption d-none d-md-block">
-                           <h3 class="font-weight-bold" style="color: black">{{ $item->titulo }}</h3>
-                           <p style="color: brown">{{ $item->subtitulo }}</p>
+                            <h3 class="font-weight-bold" style="color: white">{{ $item->titulo }}</h3>
+                            <p style="color: white">{{ $item->subtitulo }}</p>
+                            <a href="{{ route('eventos.show', $item->id) }}">Ver detalles.</a>
                         </div>
-                 </div>
-              @endforeach
+                    </div>
+                @endforeach
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only ">Previous</span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only ">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
             </a>
-          </div>
+        </div>
     </div>
 
     <hr>
-    <div class="container center col-8  " > 
+    <div class="container center col-8  ">
         <h1>Compartir los momentos más importantes de tu vida contigo, es nuestra mayor satisfacción.</h1>
         <div class="row" style="position: absolute">
-        <div class="card jumbotron" style="width: 18rem;">
-            <img class="card-img-top" src="/imagen/boda.jpg" alt="Card image cap" >
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card jumbotron" style="width: 18rem;">
+                <img class="card-img-top" src="/imagen/boda.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Bodas</h5>
+                    <p class="card-text">Nos enorgullece ser parte del momento en que decides empezar este viaje
+                        llamado vida junto a tu amor verdadero.</p>
+                    <a href="https://wa.link/xd0hni" target="_blank" class="btn btn-success">Contáctanos</a>
+                </div>
             </div>
-          </div>
-          <div class="card jumbotron" style="width: 18rem;">
-            <img class="card-img-top" src="/imagen/bautizo.jpg" alt="Card image cap" >
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card jumbotron" style="width: 18rem;">
+                <img class="card-img-top" src="/imagen/bautizo.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Bautizos</h5>
+                    <p class="card-text">Sin importar la religión, sabemos que la incorporación a Jesucristo es un
+                        momento importante en nuestras vidas.</p>
+                    <a href="https://wa.link/xd0hni" target="_blank" class="btn btn-success">Contáctanos</a>
+                </div>
             </div>
-          </div>
-          <div class="card jumbotron" style="width: 18rem;">
-            <img class="card-img-top" src="/imagen/proposal.jpg" alt="Card image cap" >
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card jumbotron" style="width: 18rem;">
+                <img class="card-img-top" src="/imagen/proposal.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Entrega de anillo.</h5>
+                    <p class="card-text">Cuando sabes que has encontrado a la pareja ideal, hay que llevar la
+                        relación al siguiente nivel.</p>
+                    <a href="https://wa.link/xd0hni" target="_blank" class="btn btn-success">Contáctanos</a>
+                </div>
             </div>
-          </div>
         </div>
     </div>
-    
-       
+
+
 </body>
 <footer>
     @include('footer-menu')

@@ -85,7 +85,7 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
 
     <div class="container">
 
-        <form action="{{ route('eventos.update', $evento->id) }}" enctype="multipart/form-data" method="POST">
+        <form class="jumbotron" action="{{ route('eventos.update', $evento->id) }}" enctype="multipart/form-data" method="POST">
             @csrf
             <input name="_method" type="hidden" value="PUT">
             <input class="hidden" name="id" value="{{ $evento->id }}">

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventosController;
 use App\Models\Evento;
-
+use GuzzleHttp\Middleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,9 +20,11 @@ Route::get('/', function () {
     return view('welcome',compact('eventos'));
 })->name('welcome');
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function() {
-    Route::resource('/eventos', EventosController::class);
-    Route::get('/dashboard', function(){
-        return view('dashboard');
-    })->name('dashboard');
-});
+Route::resource('/eventos', EventosController::class);
+
+// Route::middleware(['auth:sanctum', 'verified'])->group(function() {
+//     Route::resource('/eventos', EventosController::class);
+//     Route::get('/dashboard', function(){
+//         return view('dashboard');
+//     })->name('dashboard');
+// });

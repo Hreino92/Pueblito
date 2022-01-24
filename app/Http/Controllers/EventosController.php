@@ -8,6 +8,19 @@ use Illuminate\Support\Facades\DB;
 
 class EventosController extends Controller
 {
+    // / ** * Crear una nueva instancia de controlador. * * @return void * /
+    
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum')->except('show');
+        $this->middleware('auth:sanctum')->only('index');
+        $this->middleware('auth:sanctum')->only('create');
+        $this->middleware('auth:sanctum')->only('store');
+        $this->middleware('auth:sanctum')->only('edit');
+        $this->middleware('auth:sanctum')->only('update');
+        $this->middleware('auth:sanctum')->only('destroy');
+
+    }
     /**
      * Display a listing of the resource.
      *
@@ -58,7 +71,6 @@ class EventosController extends Controller
         Evento::create($evento);
         $eventos = DB::table('eventos')->simplePaginate(5 );
         return view('eventos.index', compact('eventos'));
-        var_dump($evento);
     }
 
     /**
@@ -69,7 +81,8 @@ class EventosController extends Controller
      */
     public function show($id)
     {
-        //
+        $evento = Evento::find($id);
+        return view('eventos.show',compact('evento'));
     }
 
     /**
