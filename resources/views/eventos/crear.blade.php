@@ -72,7 +72,7 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
 
     </x-slot>
     <div class="container">
-        <form action="{{ route('eventos.store') }}" enctype="multipart/form-data" method="POST">
+        <form action="{{ route('eventos.store') }}" enctype="multipart/form-data" method="POST" class="jumbotron">
             @csrf
             <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
                 <div class="w-full px-2 md:w-1/2">

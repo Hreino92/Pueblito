@@ -19,7 +19,7 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
         </h2>
     </x-slot>
 
-    <body>
+    <body class="jumbotron">
         <div class="col-md-12 text center">
             @if (session()->has('success'))
                 <div class="alert alert-success col-md-12">

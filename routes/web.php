@@ -20,11 +20,19 @@ Route::get('/', function () {
     return view('welcome',compact('eventos'));
 })->name('welcome');
 
+Route::get('/gallery', function () {
+    
+    return view('gallery');
+})->name('gallery');
+Route::get('/quienes-somos', function () {
+    
+    return view('quienes-somos');
+})->name('wwa');
+
 Route::resource('/eventos', EventosController::class);
 
-// Route::middleware(['auth:sanctum', 'verified'])->group(function() {
-//     Route::resource('/eventos', EventosController::class);
-//     Route::get('/dashboard', function(){
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
+Route::middleware(['auth:sanctum', 'verified'])->group(function() {
+    Route::get('/dashboard', function(){
+        return view('dashboard');
+    })->name('dashboard');
+});

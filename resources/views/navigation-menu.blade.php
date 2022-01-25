@@ -23,10 +23,10 @@
         <ul class="navbar-nav mr-auto">
            
             <li class="nav-item">
-                <a class="nav-link text-white demo" href="#">¿Quiénes Somos?</a>
+                <a class="nav-link text-white demo" href="{{route('wwa')}}">¿Quiénes Somos?</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white demo" href="#">Nuestras Instalaciones</a>
+                <a class="nav-link text-white demo" href="{{route('gallery')}}">Nuestras Instalaciones</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white demo" href="#">Protocolos COVID-19</a>
