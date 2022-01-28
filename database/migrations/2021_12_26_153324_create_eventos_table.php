@@ -19,6 +19,8 @@ class CreateEventosTable extends Migration
             $table->longText('subtitulo');
             $table->longText('descripcion');
             $table->string('img');
+            $table->string('img2');
+            $table->string('img3');
             $table->timestamps();
         });
     }

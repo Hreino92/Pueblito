@@ -17,6 +17,9 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
     <div class="container text-center">
         <h1>Hola {{Auth::user()->name}}</h1>
         <h2>Bienvenida a su sitio de administración de El Pueblito de don Luis</h2>
+        <button class="btn btn-success text-white">
+            <a href="/eventos" style="color: white;">Administrar Eventos</a>
+        </button>
     </div>
 </body>
 @include('footer-menu')

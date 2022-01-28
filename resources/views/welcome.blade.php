@@ -449,7 +449,7 @@
                         <div class="carousel-caption d-none d-md-block">
                             <h3 class="font-weight-bold" style="color: white">{{ $item->titulo }}</h3>
                             <p style="color: white">{{ $item->subtitulo }}</p>
-                            <a href="{{ route('eventos.show', $item->id) }}">Ver detalles.</a>
+                            <a href="{{ route('eventos.show', $item->id) }}" style="color: rgba(237, 242, 247, var(--border-opacity))">Ver detalles.</a>
                         </div>
                     </div>
                 @endforeach

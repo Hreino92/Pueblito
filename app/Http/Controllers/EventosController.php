@@ -55,7 +55,7 @@ class EventosController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:25600'
+            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:25600', 'img2'=> 'required|image|mimes:jpeg,jpg,png|max:25600', 'img3'=> 'required|image|mimes:jpeg,jpg,png|max:25600'
         ]);
         
          $evento = $request->all();
@@ -65,9 +65,21 @@ class EventosController extends Controller
             $imagenEvento = date('YmHis').".".$imagen->getClientOriginalExtension();
             $imagen->move($rutaGuardarImg, $imagenEvento);
             $evento['img']= "$imagenEvento";
-            $evento['subtitulo'] = $request->subtitulo;
             
         }
+        if ($imagen2 = $request->file('img2')) {
+            $imagenOpcional2 ="OPC2".date('YmHis').".".$imagen2->getClientOriginalExtension();
+            $imagen2->move($rutaGuardarImg, $imagenOpcional2);
+            $evento['img2']= "$imagenOpcional2";
+        }
+        if ($imagen3 = $request->file('img3')) {
+            $imagenOpcional3 ="OPC3".date('YmHis').".".$imagen3->getClientOriginalExtension();
+            $imagen3->move($rutaGuardarImg, $imagenOpcional3);
+            $evento['img3']= "$imagenOpcional3";
+        }
+        $evento['subtitulo'] = $request->subtitulo;
+        $evento['descripcion'] = $request->subtitulo;
+
         Evento::create($evento);
         $eventos = DB::table('eventos')->simplePaginate(5 );
         return view('eventos.index', compact('eventos'));
@@ -110,18 +122,26 @@ class EventosController extends Controller
         
         $eventoedit = Evento::find($id);
         
-        $eventoedit->subtitulo = $request->input('subtitulo');
+        
         if ($imagen = $request->file('img')) {
             $rutaGuardarImg = 'imagen/';
             $imagenEvento = date('YmHis').".".$imagen->getClientOriginalExtension();
             $imagen->move($rutaGuardarImg, $imagenEvento);
-            $eventoedit->titulo = $request->input('titulo');
-            $eventoedit['subtitulo'] = $request->subtitulo;
-            $eventoedit['descripcion'] = $request->descripcion;
-
             $eventoedit['img']= "$imagenEvento";
-            
         }
+        if ($imagen2 = $request->file('img2')) {
+            $imagenOpcional2 ="OPC2".date('YmHis').".".$imagen2->getClientOriginalExtension();
+            $imagen2->move($rutaGuardarImg, $imagenOpcional2);
+            $eventoedit['img2']= "$imagenOpcional2";
+        }
+        if ($imagen3 = $request->file('img3')) {
+            $imagenOpcional3 ="OPC3".date('YmHis').".".$imagen3->getClientOriginalExtension();
+            $imagen3->move($rutaGuardarImg, $imagenOpcional3);
+            $eventoedit['img3']= "$imagenOpcional3";
+        }
+        $eventoedit->titulo = $request->input('titulo');
+        $eventoedit['subtitulo'] = $request->subtitulo;
+        $eventoedit['descripcion'] = $request->descripcion;
         $eventoedit->update();
         $eventos = DB::table('eventos')->simplePaginate(5);
         

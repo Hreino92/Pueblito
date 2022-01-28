@@ -14,7 +14,6 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
 <body>
     <div class="jumbotron">
 
-
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -26,8 +25,33 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
                 </div>
             </div>
         </div>
-        <img src="/imagen/{{ $evento->img }}" class="img-fluid rounded mx-auto d-block" style="max-width: 80%; height: 50%;" alt="">
+        <div class="container page-top jumbotron">
+            <h1>Imágenes del evento</h1>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a href="/imagen/{{ $evento->img }}" class="fancybox" rel="ligthbox">
+                        <img src="/imagen/{{ $evento->img }}" class="zoom img-fluid " alt="">
+    
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a href="/imagen/{{ $evento->img2 }}" class="fancybox" rel="ligthbox">
+                        <img src="/imagen/{{ $evento->img2 }}" class="zoom img-fluid " alt="">
+    
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a href="/imagen/{{ $evento->img3 }}" class="fancybox" rel="ligthbox">
+                        <img src="/imagen/{{ $evento->img3 }}" class="zoom img-fluid " alt="">
+    
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
+    <!-- Page Content -->
+    
 </body>
 
 @include('footer-menu')

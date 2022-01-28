@@ -103,7 +103,22 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
                                 style="width: 0px;height: 0px;overflow: hidden;" name="img">
                         </label>
                     </div>
+                    <div class="col-sm-5 imgUp">
+                        <div class="imagePreview"></div>
+                        <label class="btn btn-primary">
+                            Imagen 2<input type="file" class="uploadFile img" value="Upload Photo"
+                                style="width: 0px;height: 0px;overflow: hidden;" name="img2">
+                        </label>
+                    </div>
+                    <div class="col-sm-5 imgUp">
+                        <div class="imagePreview"></div>
+                        <label class="btn btn-primary">
+                            Imagen 3<input type="file" class="uploadFile img" value="Upload Photo"
+                                style="width: 0px;height: 0px;overflow: hidden;" name="img3">
+                        </label>
+                    </div>
                 </div>
+                
             </div>
             <div class="flex flex-wrap -mx1 space-y-1 md:space-y-0">
                 <a href="{{ route('eventos.store') }}" class="btn btn-outline-secondary">Cancelar</a>

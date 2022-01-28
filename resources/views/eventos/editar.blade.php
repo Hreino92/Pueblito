@@ -115,26 +115,47 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
             <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
                 <div class="w-full px-2 md:w-1/2">
                     <div class="col-sm-5 imgUp">
-                        <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Imagen
-                            anterior</label>
+                        <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Imágenes anteriores
+                            anteriores</label>
                         <br>
-                        <img src="/imagen/{{ $evento->img }}" alt="" srcset="">
+                        <img src="/imagen/{{ $evento->img }}" alt="" srcset=""><hr>
+                        <img src="/imagen/{{ $evento->img2 }}" alt="" srcset=""><hr>
+                        <img src="/imagen/{{ $evento->img3 }}" alt="" srcset="">
                     </div>
                 </div>
                 
                 <div class="w-full px-2 md:w-1/2">
-                    <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Cargar
-                        Imagen Nueva</label><br>
-                    <div class="col-sm-5 imgUp">
-                        <div class="imagePreview"></div>
-                        <label class="btn btn-primary">Imagen<input type="file" class="uploadFile img"
-                                value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;" name="img">
-                        </label>
-
-                        <a href="{{ route('eventos.update', $evento->id) }}" class="btn btn-outline-secondary">Cancelar</a>
+                    <div class="w-full px-2 ">
+                        <label class="block mb-1 uppercase items-center justify-center" for="formGridCode_month">Cargar Nuevas Imágenes</label><br>
+                        <div class="col-sm-5 imgUp">
+                            <div class="imagePreview"></div>
+                            <label class="btn btn-primary">
+                                Imagen<input type="file" class="uploadFile img" value="Upload Photo"
+                                    style="width: 0px;height: 0px;overflow: hidden;" name="img">
+                            </label>
+                        </div>
+                        <div class="col-sm-5 imgUp">
+                            <div class="imagePreview"></div>
+                            <label class="btn btn-primary">
+                                Imagen 2<input type="file" class="uploadFile img" value="Upload Photo"
+                                    style="width: 0px;height: 0px;overflow: hidden;" name="img2">
+                            </label>
+                        </div>
+                        <div class="col-sm-5 imgUp">
+                            <div class="imagePreview"></div>
+                            <label class="btn btn-primary">
+                                Imagen 3<input type="file" class="uploadFile img" value="Upload Photo"
+                                    style="width: 0px;height: 0px;overflow: hidden;" name="img3">
+                            </label>
+                        </div>
+                        <div class="col-sm-5">
+                            <a href="{{ route('eventos.update', $evento->id) }}" class="btn btn-outline-secondary">Cancelar</a>
                         <button type="submit" class="btn btn-outline-primary">Guardar
                         Cambios</button>
+                        </div>
                     </div>
+                        
+                        
                 </div>
 
             </div>
