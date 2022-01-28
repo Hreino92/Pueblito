@@ -29,7 +29,10 @@
                 <a class="nav-link text-white demo" href="{{route('gallery')}}">Nuestras Instalaciones</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white demo" href="#">Protocolos COVID-19</a>
+                <a class="nav-link text-white demo" href="{{route('nuestros-servicios')}}">Nuestros Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white demo" href="{{route('protocolos-covid19')}}">Protocolos COVID-19</a>
             </li>
             @if (Auth::check())
                 <li class="nav-item">
