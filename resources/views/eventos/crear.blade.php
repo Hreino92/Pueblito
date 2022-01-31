@@ -121,8 +121,8 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
                 
             </div>
             <div class="flex flex-wrap -mx1 space-y-1 md:space-y-0">
-                <a href="{{ route('eventos.store') }}" class="btn btn-outline-secondary">Cancelar</a>
-                <button type="submit" class="btn btn-outline-primary">Guardar</button>
+                <a  class="btn btn-outline-secondary">Cancelar</a>
+                <button href="{{ route('eventos.store') }}" type="submit" class="btn btn-outline-primary">Guardar</button>
             </div>
         </form>
         <hr><hr>

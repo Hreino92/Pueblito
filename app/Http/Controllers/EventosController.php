@@ -121,7 +121,13 @@ class EventosController extends Controller
     {
         
         $eventoedit = Evento::find($id);
-        
+        $request->validate([
+            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:25600', 'img2'=> 'required|image|mimes:jpeg,jpg,png|max:25600', 'img3'=> 'required|image|mimes:jpeg,jpg,png|max:25600'
+        ]);
+
+        $eventoedit['titulo']= $request->titulo;
+        $eventoedit['subtitulo'] = $request->subtitulo;
+        $eventoedit['descripcion'] = $request->descripcion;
         
         if ($imagen = $request->file('img')) {
             $rutaGuardarImg = 'imagen/';
@@ -139,9 +145,7 @@ class EventosController extends Controller
             $imagen3->move($rutaGuardarImg, $imagenOpcional3);
             $eventoedit['img3']= "$imagenOpcional3";
         }
-        $eventoedit->titulo = $request->input('titulo');
-        $eventoedit['subtitulo'] = $request->subtitulo;
-        $eventoedit['descripcion'] = $request->descripcion;
+       
         $eventoedit->update();
         $eventos = DB::table('eventos')->simplePaginate(5);
         

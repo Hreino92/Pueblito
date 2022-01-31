@@ -149,8 +149,8 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
                             </label>
                         </div>
                         <div class="col-sm-5">
-                            <a href="{{ route('eventos.update', $evento->id) }}" class="btn btn-outline-secondary">Cancelar</a>
-                        <button type="submit" class="btn btn-outline-primary">Guardar
+                            <a  class="btn btn-outline-secondary">Cancelar</a>
+                        <button type="submit"  class="btn btn-outline-primary">Guardar
                         Cambios</button>
                         </div>
                     </div>
