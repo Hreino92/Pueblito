@@ -55,7 +55,7 @@ class EventosController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:25600', 'img2'=> 'required|image|mimes:jpeg,jpg,png|max:25600', 'img3'=> 'required|image|mimes:jpeg,jpg,png|max:25600'
+            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:51200', 'img2'=> 'required|image|mimes:jpeg,jpg,png|max:51200', 'img3'=> 'required|image|mimes:jpeg,jpg,png|max:51200'
         ]);
         
          $evento = $request->all();
@@ -122,7 +122,7 @@ class EventosController extends Controller
         
         $eventoedit = Evento::find($id);
         $request->validate([
-            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:25600', 'img2'=> 'required|image|mimes:jpeg,jpg,png|max:25600', 'img3'=> 'required|image|mimes:jpeg,jpg,png|max:25600'
+            'titulo'=> 'required', 'subtitulo' => 'required', 'descripcion'=> 'required', 'img'=> 'required|image|mimes:jpeg,jpg,png|max:51200', 'img2'=> 'required|image|mimes:jpeg,jpg,png|max:51200', 'img3'=> 'required|image|mimes:jpeg,jpg,png|max:51200'
         ]);
 
         $eventoedit['titulo']= $request->titulo;
