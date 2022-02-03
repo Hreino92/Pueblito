@@ -23,7 +23,7 @@
                 <p>Además, cada una de las habitaciones es sanitizada con productos de grado hospitalario, para garantizar que cuando te hospedes con nosotros, te sientas en un ambiente limpio, y seguro.</p>
                 <br>
                 <p>En nuestras áreas comunes encontrarás señalización e insumos para que te mantengas seguro, con alcohol gel y distanciamiento físico.</p>
-                <a class="btn btn-success btn-sm" href="https://wa.link/xd0hni" target="_blank"> <svg
+                <a class="btn btn-success btn-sm" href="https://wa.link/hh73sc" target="_blank"> <svg
                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-whatsapp" viewBox="0 0 16 16">
                         <path

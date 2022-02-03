@@ -20,14 +20,14 @@
             <div class="col-lg-5">
                 <h1 class="font-weight-light">El Pueblito de Don Luis, Ataco, El Salvador</h1>
                 <p>
-                    Somos un Hotel en el corazón de Ataco, El Salvador, desde hace XX años. Nos apasiona servir a
+                    Somos un Hotel en el corazón de Ataco, El Salvador, desde hace 10 años. Nos apasiona servir a
                     nuestros clientes con la calidez y cortesía que nos caracteriza a los salvadoreños.
                     Nuestro principal objetivo es que nuestros huéspedes disfruten de su estadía, haciéndoles sentir
                     como en casa. Nuestro grupo de colaboradores cuidará de todos los pequeños detalles que harán que la
                     experiencia de hospedarse en
                     <b>El Pueblito de Don Luis</b> sea inolvidable.
                 </p>
-                <a class="btn btn-success btn-sm" href="https://wa.link/xd0hni"
+                <a class="btn btn-success btn-sm" href="https://wa.link/hh73sc"
                         target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path

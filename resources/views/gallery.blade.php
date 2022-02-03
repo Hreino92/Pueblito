@@ -62,11 +62,11 @@
                 <img class="img-fluid" src="/imagen/Jardin/1.JPG" alt="">
                 </a>
              </div>
-            <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
+            {{-- <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/CabanaBarrioElAngel/1.JPG" class="fancylight popup-btn " data-fancybox-group="light"> 
                <img class="img-fluid" src="/imagen/CabanaBarrioElAngel/1.JPG" width="100%" height="auto" alt="">
                </a>
-            </div>
+            </div> --}}
             <div class="item gar col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/Jardin/2.JPG" class="fancylight popup-btn" data-fancybox-group="light">
                <img class="img-fluid" src="/imagen/Jardin/2.JPG" alt="">
@@ -93,6 +93,26 @@
                </a>
             </div>
             <div class="item res col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/Restaurante/6.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="/imagen/Restaurante/6.jpeg" alt="">
+               </a>
+            </div>
+            <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/CabanaBarrioElAngel/6.jpeg" class="fancylight popup-btn " data-fancybox-group="light"> 
+               <img class="img-fluid" src="/imagen/CabanaBarrioElAngel/6.jpeg" width="100%" height="auto" alt="">
+               </a>
+            </div>
+            <div class="item gar col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/Jardin/20.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="/imagen/Jardin/20.jpeg" alt="">
+               </a>
+            </div>
+            <div class="item res col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/Restaurante/7.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="/imagen/Restaurante/7.jpeg" alt="">
+               </a>
+            </div>
+            <div class="item res col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/Restaurante/2.JPG" class="fancylight popup-btn" data-fancybox-group="light">
                <img class="img-fluid" src="/imagen/Restaurante/2.JPG" alt="">
                </a>
@@ -108,6 +128,21 @@
                </a>
             </div>
             <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/CabanaBarrioElAngel/6.jpeg" class="fancylight popup-btn " data-fancybox-group="light"> 
+               <img class="img-fluid" src="/imagen/CabanaBarrioElAngel/6.jpeg" width="100%" height="auto" alt="">
+               </a>
+            </div>
+            <div class="item res col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/Restaurante/8.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="/imagen/Restaurante/8.jpeg" alt="">
+               </a>
+            </div>
+            <div class="item gar col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/Jardin/21.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="/imagen/Jardin/21.jpeg" alt="">
+               </a>
+            </div>
+            <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/CabanaBarrioSanAntonio/1.JPG" class="fancylight popup-btn" data-fancybox-group="light">
                <img class="img-fluid" src="/imagen/CabanaBarrioSanAntonio/1.JPG" alt="">
                </a>
@@ -115,6 +150,11 @@
             <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/CabanaBarrioSanAntonio/2.JPG" class="fancylight popup-btn" data-fancybox-group="light">
                <img class="img-fluid" src="/imagen/CabanaBarrioSanAntonio/2.JPG" alt="">
+               </a>
+            </div>
+            <div class="item gar col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/Jardin/22.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="/imagen/Jardin/22.jpeg" alt="">
                </a>
             </div>
             <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
@@ -130,6 +170,11 @@
             <div class="item res col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/Restaurante/5.JPG" class="fancylight popup-btn" data-fancybox-group="light">
                <img class="img-fluid" src="/imagen/Restaurante/5.JPG" alt="">
+               </a>
+            </div>
+            <div class="item gar col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/Jardin/23.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="/imagen/Jardin/23.jpeg" alt="">
                </a>
             </div>
             <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
@@ -148,10 +193,15 @@
                </a>
             </div>
             <div class="item gar col-lg-3 col-md-4 col-6 col-sm">
+               <a href="/imagen/Jardin/24.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="/imagen/Jardin/24.jpeg" alt="">
+               </a>
+            </div>
+            {{-- <div class="item gar col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/Jardin/5.JPG" class="fancylight popup-btn" data-fancybox-group="light">
                <img class="img-fluid" src="/imagen/Jardin/5.JPG" alt="">
                </a>
-            </div>
+            </div> --}}
             <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/CabanaDonaMercedes/2.JPG" class="fancylight popup-btn" data-fancybox-group="light">
                <img class="img-fluid" src="/imagen/CabanaDonaMercedes/2.JPG" alt="">

@@ -20,7 +20,7 @@
                     <p class="card-text">Nos enorgullece ser parte del momento en que decides empezar este viaje
                         llamado vida junto a tu amor verdadero.</p>
                 </div>
-                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/xd0hni"
+                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/hh73sc"
                         target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path
@@ -36,7 +36,7 @@
                     <p class="card-text">Cada día es un regalo, y organizar tu celebración de cumpleaños es un
                         verdadero honor.</p>
                 </div>
-                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/xd0hni"
+                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/hh73sc"
                         target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path
@@ -51,7 +51,7 @@
                     <h2 class="card-title">Baby Shower</h2>
                     <p class="card-text">Darle la bienvenida a un nuevo integrante de la familia es sin duda un gran acontecimiento. Que confíes en nosotros para organizarlo es un placer. </p>
                 </div>
-                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/xd0hni"
+                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/hh73sc"
                         target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path
@@ -69,7 +69,7 @@
                     <h2 class="card-title">Quince años</h2>
                     <p class="card-text">Quince años solo se cumplen una vez. Se inicia una nueva etapa en la vida y con seguridad es un evento que debe ser bien recordado para toda la vida. </p>
                 </div>
-                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/xd0hni"
+                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/hh73sc"
                         target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path
@@ -85,7 +85,7 @@
                     <p class="card-text">Sin importar la religión, sabemos que la incorporación a Jesucristo es un
                         momento importante en nuestras vidas.</p>
                 </div>
-                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/xd0hni"
+                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/hh73sc"
                         target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path
@@ -100,7 +100,7 @@
                     <h2 class="card-title">Otros eventos</h2>
                     <p class="card-text">En <b>El Pueblito de Don Luis</b> nos encanta que te sientas como en casa. Cualquier tipo de evento que desees organizar, será un gusto atenderte con calidez, prontitud y amabilidad. </p>
                 </div>
-                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/xd0hni"
+                <div class="card-footer text-center"><a class="btn btn-success btn-sm" href="https://wa.link/hh73sc"
                         target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path

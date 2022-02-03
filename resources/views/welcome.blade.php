@@ -475,7 +475,7 @@
                     <h5 class="card-title text-center">Bodas</h5>
                     <p class="card-text">Nos enorgullece ser parte del momento en que decides empezar este viaje
                         llamado vida junto a tu amor verdadero.</p>
-                    <a href="https://wa.link/xd0hni" target="_blank" class="btn btn-success">Contáctanos</a>
+                    <a href="https://wa.link/hh73sc" target="_blank" class="btn btn-success">Contáctanos</a>
                 </div>
             </div>
             <div class="card jumbotron" style="width: 18rem;">
@@ -484,7 +484,7 @@
                     <h5 class="card-title text-center">Bautizos</h5>
                     <p class="card-text">Sin importar la religión, sabemos que la incorporación a Jesucristo es un
                         momento importante en nuestras vidas.</p>
-                    <a href="https://wa.link/xd0hni" target="_blank" class="btn btn-success">Contáctanos</a>
+                    <a href="https://wa.link/hh73sc" target="_blank" class="btn btn-success">Contáctanos</a>
                 </div>
             </div>
             <div class="card jumbotron" style="width: 18rem;">
@@ -493,7 +493,7 @@
                     <h5 class="card-title text-center">Entrega de anillo.</h5>
                     <p class="card-text">Cuando sabes que has encontrado a la pareja ideal, hay que llevar la
                         relación al siguiente nivel.</p>
-                    <a href="https://wa.link/xd0hni" target="_blank" class="btn btn-success">Contáctanos</a>
+                    <a href="https://wa.link/hh73sc" target="_blank" class="btn btn-success">Contáctanos</a>
                 </div>
             </div>
         </div>

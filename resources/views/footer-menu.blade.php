@@ -66,7 +66,7 @@
 
         </section>
         <!-- Section: Social media -->
-        <a href="https://wa.link/xd0hni"
+        <a href="https://wa.link/hh73sc"
             class="float" target="_blank">
             <i class="fa fa-whatsapp my-float"></i>
         </a>
