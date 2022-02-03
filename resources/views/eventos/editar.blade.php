@@ -150,7 +150,7 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
                         </div>
                         <div class="col-sm-5">
                             <a  class="btn btn-outline-secondary">Cancelar</a>
-                        <button type="submit"  class="btn btn-outline-primary">Guardar
+                        <button type="submit" class="btn btn-outline-primary">Guardar
                         Cambios</button>
                         </div>
                     </div>
