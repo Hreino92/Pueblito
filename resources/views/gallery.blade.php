@@ -197,11 +197,11 @@
                <img class="img-fluid" src="/imagen/Jardin/24.jpeg" alt="">
                </a>
             </div>
-            <div class="item gar col-lg-3 col-md-4 col-6 col-sm">
+            {{-- <div class="item gar col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/icons/logo-vectorizado.jpg" class="fancylight popup-btn" data-fancybox-group="light">
                <img class="img-fluid" src="/imagen/icons/logo-vectorizado.jpg" alt="">
                </a>
-            </div>
+            </div> --}}
             <div class="item hab col-lg-3 col-md-4 col-6 col-sm">
                <a href="/imagen/CabanaDonaMercedes/2.JPG" class="fancylight popup-btn" data-fancybox-group="light">
                <img class="img-fluid" src="/imagen/CabanaDonaMercedes/2.JPG" alt="">
