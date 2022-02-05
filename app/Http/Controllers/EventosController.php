@@ -77,6 +77,8 @@ class EventosController extends Controller
             $imagen3->move($rutaGuardarImg, $imagenOpcional3);
             $evento['img3']= "$imagenOpcional3";
         }
+
+        $evento['titulo'] = $request->titulo;
         $evento['subtitulo'] = $request->subtitulo;
         $evento['descripcion'] = $request->subtitulo;
 

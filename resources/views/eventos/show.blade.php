@@ -20,7 +20,7 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
                     <h1 class="text-center text-info">{{ $evento->titulo }}</h1>
                     <h2 class="text-center text-info">{{ $evento->subtitulo }}</h2>
                     <div class="text-justify">
-                        {{ $evento->descripcion }}
+                        {{$evento->descripcion}}
                     </div>
                 </div>
             </div>
