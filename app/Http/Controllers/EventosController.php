@@ -80,7 +80,7 @@ class EventosController extends Controller
 
         $evento['titulo'] = $request->titulo;
         $evento['subtitulo'] = $request->subtitulo;
-        $evento['descripcion'] = $request->subtitulo;
+        $evento['descripcion'] = $request->descripcion;
 
         Evento::create($evento);
         $eventos = DB::table('eventos')->simplePaginate(5 );
