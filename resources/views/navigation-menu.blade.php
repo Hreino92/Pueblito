@@ -7,7 +7,7 @@
 </style>
 <nav class="navbar navbar-expand-lg"
     style="background: linear-gradient(90deg, rgba(76,48,37,1) 0%, rgba(163,115,92,1) 60%, rgba(149,94,61,1) 100%);">
-    <img src="/imagen/icons/Logo-Vectorizado.png" alt="" height="50px;" width="50px;" srcset="">
+    <img src="/imagen/icons/logo-vectorizado.jpg" alt="" height="50px;" width="50px;" srcset="">
     <a class="navbar-brand text-white demo" href="{{ route('welcome') }}" style="text-color: white;">
         Hotel El pueblito de Don Luis</a>
         
